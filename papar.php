@@ -10,11 +10,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $reversedtext = strrev($text);
     $Bil_perkataan = str_word_count($text);
     $Bil_huruf = strlen($text);
-
-    echo "Original Text: $text";
-    echo "Number of Words: $Bil_perkataan";
-    echo "Number of Characters: $Bil_huruf";
-    echo "Reversed Text: $reversedtext";
+    ?>
+    <p>Original Text: <?php echo $text; ?></p>
+    <p>Number of Words: <?php echo $Bil_perkataan; ?></p>
+    <p>Number of Characters: <?php echo $Bil_huruf; ?></p>
+    <p>Reversed Text: <?php echo $reversedtext; ?></p>
+    <?php
 }
 ?>
 </body>
